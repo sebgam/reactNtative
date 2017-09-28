@@ -23,7 +23,7 @@ export default class Load extends Component{
                    <Text style={styles.title}>INSTANT</Text>
                    <Text style={styles.slogan}>Make same day delivery accessible to all</Text>
 
-                    <Image source={require('../../public/images/loader128.gif')}  style={{width: 100, height: 100 }}/>
+                    <Image source={require('../../public/images/loader128.gif')}  style={{width: 100, height: 100,resizeMode:'cover' }}/>
 
                     {this.state.loaded ?  this.props.navigation.navigate('screen_Home')  : <Text style={styles.text2}>loading...</Text>}
                 </View>
