@@ -23,7 +23,7 @@ export default class User extends Component{
 		return(
 			<View style={{ flex:1, justifyContent:'center', alignItems:'center'}}>
 				<View style={styles.form}>
-					<Image source={require('../../public/images/user.png')}  style={{width: 100, height: 100}} />
+					<Image source={require('../../public/images/user.png')}  style={styles.imageUser} />
 					<TextInput
 						style={styles.input1}
 						onChangeText={(nombre) => this.setState({nombre})}
@@ -68,6 +68,9 @@ export default class User extends Component{
 }
 
 const styles = StyleSheet.create({
+	form:{
+		alignItems:'center',
+	},
   input1:{
 		width: 300,
 		height:50,
@@ -78,7 +81,13 @@ const styles = StyleSheet.create({
 	enviar:{
 		backgroundColor:"#007ACC",
 		padding: 15,
-		
-		
+		width:300,
+		marginTop:15,
+		borderRadius:10,
+	},
+    imageUser:{
+  		width:100,
+  		height:100,
+		marginBottom:15,
 	}
 });
